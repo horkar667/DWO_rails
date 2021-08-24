@@ -1,0 +1,6 @@
+      <%= form_with model: @post, url: "/posts", method: :get, local: true do |f| %>
+        <%= f.search_field :body %>
+        <%= f.select :faculty, [["理工学部","理工学部"],["経済学部","経済学部"]], include_blank: "選択" %>
+        <%= f.select :costom, [["User","User"],["Book","Book"]] %>
+        <%= f.submit "送信" %>
+      <% end %>

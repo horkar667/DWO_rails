@@ -1,0 +1,9 @@
+<h1>Posts#index</h1>
+
+<% if @lists %>
+<% @lists.each do |list| %>
+    <%= attachment_image_tag list, :image, :fill, 200, 200, format: 'jpeg' %>
+<% end %>
+<% else %>
+ありません
+<% end %>
